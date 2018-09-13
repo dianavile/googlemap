@@ -5,8 +5,9 @@ import './App.css';
 const Header = (props) => {
     return (
         <header>
-            <div className='header-text'>
-                <h1 className="header-title">Buenas Migas Barcelona</h1>               
+            <div className='header'>
+                <h1 className="header-title">Buenas Migas Barcelona</h1>
+                <h4 className="header-subtitle">FOCACCERIA</h4>               
             </div>
         </header>
     );
