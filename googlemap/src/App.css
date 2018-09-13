@@ -1,28 +1,230 @@
+/* App */
 .App {
+  width: 100%;
+  text-align: center;
+  display: flex;
+}
+
+/*
+.App-logo {
+  padding: 10px;
+  height: 160px;
+}*/
+
+html, body, main {
+ height: 100%;
+ width: 100%;
+ font-family: "Varela Round";
+}
+
+/* Header */
+.header-title, {
+  height: 10vh;
+  width: 100%;
+  margin: 0;
+  padding: 0 50Px 0 50px;
+  color: #fff;
+  font-family: "Varela Round"; 
+  font-size: 40px; 
+  text-align: center; 
+  position: relative;
+  display: flex;
+}
+
+.sub-title, {
+font-size: 16px;
+}
+
+/* Footer */
+.copyright {
+  height: 8vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Varela Round"; 
+  color: #fff;
+  background-color: #d8c0a3;
+  position: relative;
+}
+
+.footer-wrapper {
+  font-size: 100%;
+}
+
+
+/* GoogleMap */
+.GoogleMap {
+  height: 400px;
+  width: 100%;  
+  margin: 0;
+  padding: 0;  
+  background-color: #fff; 
+}
+
+/*LOCATIONLIST- MENU*/
+/* Side navigation- Settings Off canvas nav element */
+nav  {
+    height: 100%; 
+    width: 300px; 
+    position: absolute; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    margin-bottom: 0;
+    background-color: #d8c0a3;
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transform: translate(-300px, 0);
+    transition: 0.5s ease; 
+    color: #fff;
+} 
+
+nav .search-locations{
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+nav .search-locations input {
+  padding: 10px;
+  box-shadow: 5px 0 0 20px #d8c0a3;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+nav .menu ul {
+  /*width: 100%;*/
+  list-style: none;
+  margin: 0;
+  padding: 10px 0 0 0;
+  justify-content: space-between;
+
 }
 
-.App-title {
-  font-size: 1.5em;
+/* Side navigation links 
+nav .menu ul li a {
+  color: #fff;
+  padding: 16px 0;
+  text-decoration: none;
+  display: block;
+  text-align: center;
 }
 
-.App-intro {
-  font-size: large;
+Change color on hover 
+nav .menu ul li a:hover {
+  background-color: #4caf50; 
+  color:#111;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+nav .menu ul li i {
+  padding: 0 0 10px 0;
+  font-size:24px;
+} */
+
+/*SIDEBAR FROM W3school
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_push*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #d8c0a3;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media screen and (min-width: 600px){
+	nav {
+		position: relative;
+		transform: translate(0, 0);
+	}
+	body {
+		display: flex;
+		flex-flow: row nowrap;
+	}
+	main {
+		width: auto;
+    flex-grow: 1;
+  }
+}
+
+@media screen and (max-width: 850px){
+  .footer {
+    font-size: 20px;
+  }
+}
+
+
+/* https://www.cssfontstack.com/Varela-Round
+FONT
+{ font-family: "Varela Round"; 
+  font-size: 24px; 
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: 700; 
+  line-height: 26.4px; } 
+
+  h3 { 
+    font-family: "Varela Round"; 
+    font-size: 14px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 15.4px; 
+  } 
+  
+  p { 
+    font-family: "Varela Round"; 
+    font-size: 14px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; line-height: 20px; 
+  } 
+ 
+*/
+
+/* color
+darkbrown: #7D4436;
+middlebrown: #BD9062;
+lightbrown: #D8C0A3;
+yellow: #D4AE5F;
+pink: #D27F85;
+background: #FFF;
+letters: #000;
+*/
+
+ 
