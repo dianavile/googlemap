@@ -1,33 +1,27 @@
-/* App */
-.App {
-  width: 100%;
+/* Header */
+.header {
+  background-color: #fff;
   text-align: center;
-  display: flex;
 }
 
-/*
-.App-logo {
-  padding: 10px;
-  height: 160px;
-}*/
-
-/* Header */
 .header-title, {
-  height: 10vh;
-  width: 100%;
   margin: 0;
   padding: 0 50Px 0 50px;
-  color: #fff;
+  color: #000;
   font-family: "Varela Round"; 
   font-size: 40px; 
-  text-align: center; 
   position: relative;
-  display: flex;
 }
 
 .sub-title, {
 font-size: 16px;
 }
+
+/*  TO DEBUG: hamburger button
+.open-btn {
+  font-size: 30 px;
+  cursor: pointer;
+}*/
 
 /* GoogleMap */
 .GoogleMap {
@@ -49,8 +43,8 @@ html, body, main {
   margin: 0;
   padding: 0;
   font-family: "Varela Round"; 
-  color: #fff;
-  background-color: #d8c0a3;
+  color: #000;
+  background-color: #fff;
   position: relative;
 }
 
@@ -58,9 +52,10 @@ html, body, main {
   font-size: 100%;
 }
 
-
 /*LOCATIONLIST- MENU*/
 /* Side navigation- Settings Off canvas nav element */
+/*SIDEBAR FROM W3school
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_push*/
 nav  {
     height: 100%; 
     width: 300px; 
@@ -69,10 +64,9 @@ nav  {
     top: 0;
     left: 0;
     margin-bottom: 0;
-    background-color: #d8c0a3;
+    background-color: #d4ae5f;
     overflow-x: hidden; 
-    padding-top: 60px; 
-    transform: translate(-300px, 0);
+    padding-top: 50px; 
     transition: 0.5s ease; 
     color: #fff;
 } 
@@ -83,19 +77,20 @@ nav .search-locations{
 
 nav .search-locations input {
   padding: 10px;
-  box-shadow: 5px 0 0 20px #d8c0a3;
+  box-shadow: 5px 0 0 10px #d4ae5f;
+}
+
+nav .menu {
+  text-align: center;
 }
 
 nav .menu ul {
-  /*width: 100%;*/
   list-style: none;
   margin: 0;
   padding: 10px 0 0 0;
-  justify-content: space-between;
-
 }
 
-/* Side navigation links 
+/* Side navigation links */
 nav .menu ul li a {
   color: #fff;
   padding: 16px 0;
@@ -104,9 +99,9 @@ nav .menu ul li a {
   text-align: center;
 }
 
-Change color on hover 
+/* Change color on hover */
 nav .menu ul li a:hover {
-  background-color: #4caf50; 
+  background-color: #d27f85;
   color:#111;
   cursor: pointer;
 }
@@ -114,53 +109,10 @@ nav .menu ul li a:hover {
 nav .menu ul li i {
   padding: 0 0 10px 0;
   font-size:24px;
-} */
-
-/*SIDEBAR FROM W3school
-https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_push*/
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #d8c0a3;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
+} 
 
 /* MEDIA QUERIES */
-
+/*
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -185,7 +137,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_push*/
   .footer {
     font-size: 20px;
   }
-}
+}*/
 
 
 /* https://www.cssfontstack.com/Varela-Round
@@ -225,4 +177,3 @@ pink: #D27F85;
 background: #FFF;
 letters: #000;
 */
- 
