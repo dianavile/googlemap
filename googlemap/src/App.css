@@ -11,12 +11,6 @@
   height: 160px;
 }*/
 
-html, body, main {
- height: 100%;
- width: 100%;
- font-family: "Varela Round";
-}
-
 /* Header */
 .header-title, {
   height: 10vh;
@@ -35,6 +29,20 @@ html, body, main {
 font-size: 16px;
 }
 
+/* GoogleMap */
+.GoogleMap {
+  height: 100vh;  
+}
+
+/* Make the main page fill the entire screen*/
+html, body, main {
+ height: 100%;
+ width: 100%;
+ margin: 0;
+ padding: 0;
+ font-family: "Varela Round";
+}
+
 /* Footer */
 .copyright {
   height: 8vh;
@@ -50,15 +58,6 @@ font-size: 16px;
   font-size: 100%;
 }
 
-
-/* GoogleMap */
-.GoogleMap {
-  height: 400px;
-  width: 100%;  
-  margin: 0;
-  padding: 0;  
-  background-color: #fff; 
-}
 
 /*LOCATIONLIST- MENU*/
 /* Side navigation- Settings Off canvas nav element */
@@ -226,5 +225,4 @@ pink: #D27F85;
 background: #FFF;
 letters: #000;
 */
-
  
