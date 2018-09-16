@@ -12,9 +12,7 @@ class App extends Component {
   }
 
 /* Add GoogleMaps
-* The async attribute allows the browser to render the page while the API loads
-* The key parameter contain own API key(https://developers.google.com/maps/documentation/javascript/versions)
-* The callback parameter executes the initMap() function
+* Load the API from the specified URL- see further loadscript() function
 */
   loadGoogleMap = () => {
     loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyBTtVemxpZPtEsbI6cw84CSstMfpo90ElU&v=3.33&callback=initMap")
@@ -26,8 +24,7 @@ class App extends Component {
   initMap = () => {
     this.map = new window.google.maps.Map(
       document.getElementById('map'),
-      {
-        center: { lat: 41.3851, lng: 2.1734 },
+      {center: { lat: 41.3851, lng: 2.1734 },
         zoom: 15
       }
     );
@@ -52,7 +49,7 @@ class App extends Component {
             <Header />  
         <LocationList /> 
         <main>
-          <div id='map' style={{ width: '100vw', height: 410 }}></div>  
+          <div id='map' style={{ width: '100vw', height: 500 }}></div>  
         </main>   
         <Footer />
       </div>
@@ -60,7 +57,13 @@ class App extends Component {
   }
 }
 
-//loadfunction: refactored from https://github.com/elharony/Udacity-P8-Neighborhood-Map-Project-Explained
+/* Add GoogleMaps
+* The async attribute allows the browser to render the page while the API loads
+* The key parameter contain own API key(https://developers.google.com/maps/documentation/javascript/versions)
+* The callback parameter executes the initMap() function
+*/
+
+//loadfunction from https://github.com/elharony/Udacity-P8-Neighborhood-Map-Project-Explained
 function loadScript(url){
   let index = window.document.getElementsByTagName("script")[0]
   let script = window.document.createElement("script")
