@@ -4,16 +4,16 @@ This will be the Project README.
 Untill ready, I will use it as a checklist for Project Requirements
 
 ## Install Create React App 
-- [] Install Create React App 
+- [X] Install Create React App 
 
 ## Documentation
 - [] README file included. It details all the steps required to successfully run the application.
-- [] Comments are available.
-- [] Comments effectively explain longer code procedures
+- [X] Comments are available.
+- [X] Comments effectively explain longer code procedures
 
 ## Single Page Application 
-- [] Handle navigation in-page
-- [] Load page only once
+- [X] Handle navigation in-page
+- [X] Load page only once
 - [] Manage all links and form submission through AJAX requests in the background
 - [] Changes to the page, URL address updates are handled by JavaScript.
  
@@ -21,12 +21,12 @@ Untill ready, I will use it as a checklist for Project Requirements
 - [] Proper Use of React: React code follows a reasonable component structure
 - [] State control is managed appropriately: event handlers are passed as props to child components.
 - [] The state is managed by parent component functions when appropriate
-- [] 5 locations: There are at least 5 locations in the modal
+- [X] 5 locations: There are at least 5 locations in the modal
 - [] These 5 locations in modal are hard-coded or retrieved from a data API.
  
 ## Components-App Functionality
 ### Location filter
-- [] Include a text input field or drop-down menu
+- [X] Include a text input field or drop-down menu
 - [] This filters the map markers to location matching the text input or selection.
 - [] This filter the list items to location matching the text input or selection.
 - [] Filter function runs error free
@@ -61,10 +61,10 @@ Untill ready, I will use it as a checklist for Project Requirements
 ### Additional Location Data
 - [] Functionality provides additional data about location, sourced from a 3rd party API.
 - [] Information is a provider in the marker´s info window, or in an HTML element in the DOM(sidebar, list view, modal.)
-- [] Provide attribution for the source of additional data. Ex. if foursquare (indicate in User Interface(UI)&README Foursquare data.
+- [X] Provide attribution for the source of additional data. Ex. if foursquare (indicate in User Interface(UI)&README Foursquare data.
 
 ## Error Free
-- []The app runs without console errors
+- [X]The app runs without console errors
 
 ## Usability
 - [] Functionality is presented in a usable and responsive manner.
@@ -92,5 +92,5 @@ Untill ready, I will use it as a checklist for Project Requirements
 
 ## Offline Use
 ### Service Worker
-- [] When available in the browser, the site uses a service worker to cache responses to requests for site assets.
+- [X] When available in the browser, the site uses a service worker to cache responses to requests for site assets.
 - [] Visited pages are rendered when there is no network access.
