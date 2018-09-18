@@ -11,16 +11,21 @@ class App extends Component {
     this.loadGoogleMap()
   }
 
-/* Add GoogleMaps
-* Load the API from the specified URL- see further loadscript() function
+/* Add GoogleMap 
+* Load the API from the specified URL asynchronously- see further loadscript() function below
+* The async attribute allows the browser to render the page while the API loads
+* The key parameter contain own API key(https://developers.google.com/maps/documentation/javascript/versions)
+* The callback parameter executes the initMap() function
 */
   loadGoogleMap = () => {
     loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyBTtVemxpZPtEsbI6cw84CSstMfpo90ElU&v=3.33&callback=initMap")
     window.initMap = this.initMap
   }
- 
-  //Initialize google map
-  // The location of Barcelona, center and zoom are required.
+
+/*
+* Initialize google map
+* The location of Barcelona, center and zoom are required.
+*/
   initMap = () => {
     this.map = new window.google.maps.Map(
       document.getElementById('map'),
@@ -31,7 +36,7 @@ class App extends Component {
     console.log(this.map);
   }
 
-  /*
+  /* TODO: figure out how to add hamburger, toggle menu
   openNav() {
     document.querySelector(".menu").style.width = "250px";
 
@@ -44,24 +49,19 @@ class App extends Component {
   in header add:  /*openNav={this.openNav} */
 
   render(){
-        return (
-      <div className="App">
-            <Header />  
-        <LocationList /> 
-        <main>
-          <div id='map' style={{ width: '100vw', height: 500 }}></div>  
-        </main>   
-        <Footer />
-      </div>
+    return (
+    <div className="App">
+      <Header />  
+      <LocationList /> 
+      <main>
+        <div id='map' style={{ width: '100vw', height: '950px' }}>
+      </div>  
+      </main>   
+      <Footer />
+    </div>
     );
   }
 }
-
-/* Add GoogleMaps
-* The async attribute allows the browser to render the page while the API loads
-* The key parameter contain own API key(https://developers.google.com/maps/documentation/javascript/versions)
-* The callback parameter executes the initMap() function
-*/
 
 //loadfunction from https://github.com/elharony/Udacity-P8-Neighborhood-Map-Project-Explained
 function loadScript(url){
