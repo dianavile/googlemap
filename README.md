@@ -7,7 +7,7 @@ Untill ready, I will use it as a checklist for Project Requirements
 - [X] Install Create React App 
 
 ## Documentation
-- [] README file included. It details all the steps required to successfully run the application.
+- [] README file included. __TODO:__ It details all the steps required to successfully run the application.
 - [X] Comments are available.
 - [X] Comments effectively explain longer code procedures
 
