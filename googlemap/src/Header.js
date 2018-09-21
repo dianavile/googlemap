@@ -4,18 +4,17 @@ import './App.css';
 //Stateless Functional Component
 const Header = (props) => {
     return (
-        <header>
-            <div className='header'>
+        <header className='header'>
+            <div className='header-titles'>
                 <h1 className="header-title">Buenas Migas Barcelona</h1>
-                <h4 className="header-subtitle">FOCACCERIA</h4>               
+                <h4 className="header-subtitle">FOCACCERIA</h4>
             </div>
         </header>
     );
 }
-   
+
 export default Header;
 
-   
 //TO ADD under header: <div className='header-hamburger'>
 //<span className='open-btn' onClick={props.openNav()}>&#9776; open</span>
 //</div>
