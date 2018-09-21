@@ -4,7 +4,7 @@ class Locationlist extends React.Component {
 
     render() {
         return (
-            <nav>
+            <nav>                  
                 <div className='search-locations'>
                     <input
                         type='text'
@@ -12,7 +12,7 @@ class Locationlist extends React.Component {
                         placeholder='Search for location'
                     />
                 </div>
-                <div className="menu">
+                    <div className="menu">
                     <ul>
                         {/*eslint-disable-next-lin */}
                         <li><a href='#Location1'>BuenasMigas1</a></li>
@@ -26,7 +26,7 @@ class Locationlist extends React.Component {
                         <li><a href='#Location9'>BuenasMigas9</a></li>
                         <li><a href='#Location10'>BuenasMigas10</a></li>
                     </ul>
-                </div>
+                </div>                
             </nav>
         )
     }
