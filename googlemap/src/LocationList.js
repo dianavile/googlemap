@@ -9,7 +9,7 @@ class Locationlist extends React.Component {
                     <input
                         type='text'
                         className=""
-                        placeholder='Search for location'
+                        placeholder='Search for a location'
                     />
                 </div>
                     <div className="menu">
