@@ -46,35 +46,17 @@ class App extends Component {
 * The location of Barcelona, center and zoom are required.
 */
   initMap = () => {
+    // eslint-disable-next-line
     const mapstyle = mapStyle;
     this.map = new window.google.maps.Map(
       document.getElementById('map'),
       {
         center: { lat: 41.3851, lng: 2.1734 },
         zoom: 15,       
-        style: mapStyle
+        styles: mapStyle
       });
     console.log(this.map);
   }
-
-  /* TODO: figure out how to add hamburger, toggle menu
-  openNav() {
-    document.querySelector(".menu").style.width = "250px";
-  }
-  closeNav() {
-    document.querySelector(".menu").style.width = "0";
-  }
-  in header add:  /*openNav={this.openNav} */
-
-    /* TODO: lateron DEFINE MARKER
-  // Create marker for locations in venues array in state
-    marker = new window.google.maps.Marker({
-    position: { myCenter }, // location details to let marker appear
-    map: map.setMap(map), // Let marker appear on the map
-    title: location.venue.name, // Add location name when hovering over marker 
-    animation: window.google.maps.Animation.DROP,  // Add drop down animation to marker 
-    icon: icon // display icon
-  }); */
 
   render(){
     const { mapStyle, center, zoom, } = this.state
