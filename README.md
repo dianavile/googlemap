@@ -18,7 +18,7 @@ Untill ready, I will use it as a checklist for Project Requirements
 - [] Changes to the page, URL address updates are handled by JavaScript.
  
 ## Application Architecture
-- [] Proper Use of React: React code follows a reasonable component structure
+- [X] Proper Use of React: React code follows a reasonable component structure
 - [] State control is managed appropriately: event handlers are passed as props to child components.
 - [] The state is managed by parent component functions when appropriate
 - [X] 5 locations: There are at least 5 locations in the modal
@@ -32,7 +32,7 @@ Untill ready, I will use it as a checklist for Project Requirements
 - [] Filter function runs error free
 
 ### List View
-- [] A listview of location names is provided.
+- [x] A listview of location names is provided.
 - [] The list view displays all locations by default
 - [] The list view displays a filtered subset of locations if the filter is applied.
 - [] Click a location on the list displays unique info about location.
