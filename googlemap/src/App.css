@@ -109,10 +109,10 @@ nav .menu ul li a {
 
 /* Change color on hover */
 nav .menu ul li a:hover {
-  background-color: #d27f85;
+  background-color: #d8C0a3;
   color:#111;
   cursor: pointer;
-  border: 2px solid #d27f85;
+  border: 2px solid #d8C0a3;
 }
 
 nav .menu ul li i {
