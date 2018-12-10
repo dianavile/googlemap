@@ -8,16 +8,26 @@ import Footer from './Footer.js';
 
 class App extends Component {
 
-  //state = {
-    //allLocations: [],
-    //Locations: [],
-    //Markers: [],
-    //latLong: '41.3851, 2.1734'
-//}
+  state = {
+  locations: null  
+}
 
-  //componentDidMount(){
-  
-  //}
+  getPlaces(){
+  fetch('https://api.foursquare.com/v2/venues/explore?client_id=T24PWGNQT33GTQ1ZVJYJVUFFIOXPZTKIGYIA0WD1D2NQDVSJ&client_secret=EGPDEHMSUVQUZZXBRLAWE4FZ3OOIXVEDSWPSXDD5UXCZVDP0&v=20180101&limit=20&ll= 41.3851,2.1734&query=buenas+migas')    
+  .then(res => res.json())
+  .then(res => {
+    // Code for handling API response
+    this.setState({locations: res.response.groups[0].items});
+      console.log(res);
+      })
+    .catch(function(err) {
+    // Code for handling errors
+      console.log(err)
+    });  
+}
+  componentDidMount(){
+    this.getPlaces();
+  }
   render() { 
    
     return (
@@ -33,15 +43,3 @@ class App extends Component {
 }
 
 export default App;
-
-//TO TEST: add Foursquare API request to call all "Buenas Migas" lunch places in Barcelona
-fetch('https://api.foursquare.com/v2/venues/explore?client_id=T24PWGNQT33GTQ1ZVJYJVUFFIOXPZTKIGYIA0WD1D2NQDVSJ&client_secret=EGPDEHMSUVQUZZXBRLAWE4FZ3OOIXVEDSWPSXDD5UXCZVDP0&v=20180101&limit=20&ll= 41.3851,2.1734&query=buenas+migas')    
-.then(res => res.json())
-.then(res => {
-  // Code for handling API response
-    console.log(res);
-    })
-  .catch(function(err) {
-  // Code for handling errors
-    console.log(err)
-  });
