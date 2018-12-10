@@ -78,7 +78,7 @@ class Map extends Component {
   });
   google.maps.event.addListener(marker, 'click', (function(marker, i) {
     return function() {
-      infowindow.setContent(location[0]);
+      infowindow.setContent('<H2>'+ location[0]+'</H2> <p></p>');
       infowindow.open(this.map, marker);
     }
   })(marker, i));  
