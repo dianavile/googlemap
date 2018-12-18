@@ -12,11 +12,3 @@ class SideBar extends Component {
 }
 
 export default SideBar;
-
-//TODO Create an Off-Canvas Menu, code partly from https://www.w3schools.com/howto/howto_js_off-canvas.asp
-//TODO Create a searchbar https://www.w3schools.com/howto/howto_css_searchbar.asp
-
-
-
-
-
