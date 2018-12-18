@@ -14,8 +14,3 @@ const Header = (props) => {
 }
 
 export default Header;
-
-//TO ADD under header: <div className='header-hamburger'>
-//<span className='open-btn' onClick={props.openNav()}>&#9776; open</span>
-//</div>
-//tutorial for hamburgermenu https://www.w3schools.com/howto/howto_js_off-canvas.asp AND https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_push
