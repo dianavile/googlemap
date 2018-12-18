@@ -1,11 +1,11 @@
-import React from 'react'
+import React, {Component} from 'react'
 import './App.css';
-//import Data from "./Data.json";
+const google = window.google;
 
 /* Filter the list of locations
 * This component contains all needed to filter the locations
 */
-class Locations extends React.Component {
+class Locations extends Component {
 
     state = {
         query: '',    
@@ -16,29 +16,31 @@ class Locations extends React.Component {
             <nav>
                 <div className='search-locations'>
                     <input
-                        aria-label='search field' 
-                        type='text'                        
-                        placeholder='Search for a location'
+                        className="Searchbox"
+                        ref={(c) => {
+                            if (!c) {
+                                return;
+                            }
+                            const searchBox = new google.maps.places.SearchBox(c, { types: ['geocode'] });
+                            searchBox.addListener('places_changed', ()=> {
+                                const places = searchBox.getPlaces();
+                                if (places.length > 0) {
+                                    const position = {lat: places[0].geometry.location.lat(), lng: places[0].geometry.location.lng()};
+                                    this.props.getNewLocation(position)
+                                }
+                            })
+                        }}
+                        placeholder="Search a place..."
+                        type="text"
                     />
                 </div>
                 <div className="menu">
                     <ul>
-                        {/*eslint-disable-next-lin */}
-                        <li><a href='#Location1'>BuenasMigas1</a></li>
-                        <li><a href='#Location2'>BuenasMigas2</a></li>
-                        <li><a href='#Location3'>BuenasMigas3</a></li>
-                        <li><a href='#Location4'>BuenasMigas4</a></li>
-                        <li><a href='#Location5'>BuenasMigas5</a></li>
-                        <li><a href='#Location6'>BuenasMigas6</a></li>
-                        <li><a href='#Location7'>BuenasMigas7</a></li>
-                        <li><a href='#Location8'>BuenasMigas8</a></li>
-                        <li><a href='#Location9'>BuenasMigas9</a></li>
-                        <li><a href='#Location10'>BuenasMigas10</a></li>
-                        <li><a href='#Location10'>BuenasMigas11</a></li>
-                        <li><a href='#Location10'>BuenasMigas12</a></li>
-                        <li><a href='#Location10'>BuenasMigas13</a></li>
-                        <li><a href='#Location10'>BuenasMigas14</a></li>
-                        <li><a href='#Location10'>BuenasMigas15</a></li>
+                        {this.props.venues.length && this.props.venues.map((place, index) => (
+                            <li><a href='#Location1' onClick={() => {this.props.selectedVenue(place.venue)}}>{place.venue.name} </a></li>
+                            )
+                        )
+                        }
                     </ul>
                 </div>
             </nav>
@@ -48,19 +50,10 @@ class Locations extends React.Component {
 
 export default Locations;
 
-        
-/* ensure roles and tab index are correct for ARIA and a11y compliance
-*Tyler McGinnis course here
-* ensure event handlers are passed in as props, per the rubric
-* binding needs to happen else the app won't behave correctly
-*<li
-    role="button"
-    tabIndex="0"
-    onKeyPress={this.props.openInfoWindow.bind(this, this.props.data.marker)} 
-    onClick={this.props.openInfoWindow.bind(this, this.props.data.marker)}>
-    this.props.data.Locations}
-*</li>
-*/
+
+
+
+
 
 
 
