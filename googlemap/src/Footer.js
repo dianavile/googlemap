@@ -20,14 +20,9 @@ const Footer = (props) => {
             Data:
             <a href='https://developer.foursquare.com/'> Foursquare API
             </a>
-            Icons:
-            <a href="https://www.flaticon.com/" 
-                title="Flaticon">Freepics,Flaticon.
-            </a>
             </p>
         </footer>
         )    
 }
 
 export default Footer
-      
